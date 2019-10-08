@@ -1,0 +1,53 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    },
+    {
+      "src": "index.js",
+      "use": "@now/node",
+      "config": {
+        "distDir": "/",
+        "includeFiles": [
+          "/(.*)",
+          "api/**/*.*",
+          "config/*.*",
+          "config/**/*.*",
+          "config/**/**/*.*",
+          "extensions/**/**/*.*",
+          "build/*.*",
+          "locales/*.*"
+        ]
+      }
+    },
+    {
+      "src": "build/**",
+      "use": "@now/static",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/admin/(.*)",
+      "dest": "/build/$1",
+      "continue": true
+    },
+    {
+      "src": "/admin",
+      "dest": "/build/index.html",
+      "continue": true
+    },
+    {
+      "src": "/users-permissions/init",
+      "dest": "/users-permissions/init",
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
+    }
+  ],
+  "public": true
+}

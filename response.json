@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "id": "dpl_6cYwmUtb5qNGz8xjLfcss7MUs9Lw",
+  "url": "serverless-aqvfapiu9.now.sh",
+  "name": "Serverless",
+  "meta": {},
+  "plan": "unlimited",
+  "public": true,
+  "ownerId": "team_MabaNKsQoW6xAxc5ePGg7Tb5",
+  "readyState": "INITIALIZING",
+  "createdAt": 1570425140064,
+  "createdIn": "sfo1",
+  "regions": ["sfo1"],
+  "builds": [{
+    "src": "package.json",
+    "use": "@now/static-build"
+  }, {
+    "src": "*.js",
+    "use": "@now/node"
+  }],
+  "routes": null,
+  "env": [],
+  "target": null,
+  "build": {
+    "env": ["NOW_BUILDER_DEBUG"]
+  },
+  "alias": ["serverless-masterde.xyzdev.now.sh"],
+  "aliasAssigned": false
+}

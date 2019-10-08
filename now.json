@@ -1,0 +1,40 @@
+{
+  "builds": [{
+      "src": "server.js",
+      "use": "@now/node",
+      "config": {
+        "includeFiles": [
+          "config/*.*",
+          "config/**/*.*",
+          "config/**/**/*.*",
+          "extensions/*.*",
+          "extensions/**/*.*",
+          "extensions/**/**/*.*"
+        ]
+      }
+    },
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    },
+    {
+      "src": ".cache/*.*",
+      "use": "@now/static",
+      "config": {
+        "distDir": ".cache"
+      }
+    }
+  ],
+  "routes": [{
+      "src": "/(?!admin/?)(.*)",
+      "dest": "/$1",
+      "continue": true
+    },
+    {
+      "src": "/admin/([^/]+)",
+      "dest": "/.cache/admin/$1"
+    }
+  ],
+  "public": true,
+  "alias": "serverless.xyz.dev"
+}

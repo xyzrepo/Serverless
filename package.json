@@ -1,0 +1,51 @@
+{
+  "name": "Serverless",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "lint": "eslint .",
+    "now-build": "node server.js"
+  },
+  "devDependencies": {
+    "@now/node": "^1.0.1",
+    "@now/static-build": "^0.10.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.16.0"
+  },
+  "dependencies": {
+    "knex": "^0.19.5",
+    "lodash": "^4.17.15",
+    "serverless-http": "^2.3.0",
+    "sqlite3": "latest",
+    "strapi": "3.0.0-beta.16.6",
+    "strapi-admin": "3.0.0-beta.16.6",
+    "strapi-hook-bookshelf": "3.0.0-beta.16.6",
+    "strapi-hook-knex": "3.0.0-beta.16.6",
+    "strapi-plugin-content-manager": "3.0.0-beta.16.6",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.16.6",
+    "strapi-plugin-email": "3.0.0-beta.16.6",
+    "strapi-plugin-settings-manager": "3.0.0-beta.16.6",
+    "strapi-plugin-upload": "3.0.0-beta.16.6",
+    "strapi-plugin-users-permissions": "3.0.0-beta.16.6",
+    "strapi-utils": "3.0.0-beta.16.6"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "b98ab90c-5e7b-4439-9f52-d6ae08af0797"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

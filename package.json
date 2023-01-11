@@ -21,7 +21,7 @@
     "eslint-plugin-react": "^7.16.0"
   },
   "dependencies": {
-    "knex": "^0.19.5",
+    "knex": "^2.4.0",
     "lodash": "^4.17.15",
     "serverless-http": "^2.3.0",
     "sqlite3": "latest",
